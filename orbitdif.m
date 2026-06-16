@@ -1,8 +1,3 @@
-clear;close;clc;
-
-C = 1;
-C*r/abs(r)^3;
-
 function dxdt = orbitdif(t,X)
 
   dxdt = zeros[1,4];
