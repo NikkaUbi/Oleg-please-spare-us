@@ -22,12 +22,20 @@ T = 2 * pi * sqrt(a^3 / C);
 % ----------------------------------
 
 % Set tspan from 0 to exactly one period T
-tspan = linspace(0, T, 2000);
+tspan = linspace(0, T, 40000);
 options = odeset('RelTol', 1e-6, 'AbsTol', 1e-9);
 
 
 [tt, XX] = ode45(@(t,x) orbitdif(t,x), tspan, innit, options);
 
+for n = 2:length(tspan)
+  cord1 = XX(n,1:2);
+  cord1(end+1) = 0;
+  cord2 = XX(n-1,1:2);
+  cord2(end+1) = 0;
+  A(n) = 0.5*norm(cross(cord1,cord2));
+
+end
 
 figure;
 plot(XX(:,1), XX(:,2));

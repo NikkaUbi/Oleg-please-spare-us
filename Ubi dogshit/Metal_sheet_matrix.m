@@ -1,6 +1,6 @@
 close; clear; clc;
 
-N = 160;
+N = 200;
 N = N+2;%N+2 for outer temperature (left,right,top,bottom)
 plate = zeros(N,N);
 plate(2:N-1,1) = randi([-200,0], N-2, 1);   % Left
@@ -65,6 +65,6 @@ figure;
 imagesc(plate(2:N-1,2:N-1));
 colorbar;
 colormap(hot);
-caxis([0 250]);
-title('Exact Simultaneous Solution (Fixed Matrix Solver)');
+caxis([-200 250]);
+title('Metal Sheet Heatmap');
 xlabel('X'); ylabel('Y');
