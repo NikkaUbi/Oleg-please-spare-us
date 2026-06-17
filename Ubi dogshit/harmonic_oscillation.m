@@ -7,6 +7,8 @@ clear;close;clc;
 
   innit = [pi/6; 0];
 
+  amp =
+
   tspan = [0 100];
 
   [tt, XX] = ode45(@(t,X) h_osc_diff(t,X), tspan,innit);

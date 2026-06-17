@@ -1,4 +1,4 @@
-function dxdt = h_osc_diff(t,X)
+function dxdt = h_osc_diff(t,X,)
 
   global g L;
   dxdt = zeros(2,1);
