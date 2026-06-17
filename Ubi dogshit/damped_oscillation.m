@@ -29,4 +29,3 @@ end
 
 plot(t, XX(:,2), '-');
 
-plot(t, f(t), '-');
