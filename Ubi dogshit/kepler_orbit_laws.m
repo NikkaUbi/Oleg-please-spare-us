@@ -1,8 +1,10 @@
 clear; close all; clc;
 
 global C;
+
+C = 4*pi^2;
 % Initial conditions
-v0_vec = [2*pi*1.4, 0];
+v0_vec = [2*pi*1.3, 0];
 cord0 = [0, 1];
 innit = [cord0, v0_vec];
 
